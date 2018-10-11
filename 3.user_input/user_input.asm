@@ -1,5 +1,5 @@
 ; ----------------------------------------------------------------------------------------
-; Gets User input and publish it in the terminal. Runs on 64-bit Linux only.
+; Gets User input and prints it in the terminal. Runs on 64-bit Linux only.
 
 ; To assemble and run:
 ; nasm -f elf64 -o user_input.o user_input.asm && ld user_input.o -o user_input
@@ -9,7 +9,7 @@ section .data
   text1:  db  "What is your name? "
   text2:  db  "hello, "
 
-section .bss
+section .bss ; used to hold data during execution
   name:  resb  18 ; reserve 18 bytes
 
 section .text
