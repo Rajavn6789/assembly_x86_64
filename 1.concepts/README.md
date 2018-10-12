@@ -1,13 +1,18 @@
+## 64 bit Architecture
+
+Since the 64-bit registers allow access for many sizes and locations, we define a byte as 8 bits, a word as 16 bits, a double word as 32 bits, a quadword as 64 bits, and a double quadword as 128 bits. Intel stores bytes "little endian," meaning lower significant bytes are stored in lower memory addresses.
+
+[![N|Solid](https://software.intel.com/sites/default/files/m/7/5/0/2/0/29529-figure-1.jpg)]
+Source: [Intel](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/x64-architecture)
 ### a) Registers
 Registers are part of processors that hold 64 bits of data. It can hold values ranging from 0 - 2^64.
 
-1. rip - instruction pointer
-2. rax - register a extended(accumulator)
-3. rbx -  register b extended(base)
-4. rcx - register c extended(count)
-5. rdx - register d extended
-6. rbp -  register base pointer (start of stack)
-7. rsp -  register stack pointer (current location in stack, growing downwards)
+1. rax - register a extended(accumulator)
+2. rbx -  register b extended(base)
+3. rcx - register c extended(count)
+4. rdx - register d extended
+5. rbp -  register base pointer (start of stack)
+6. rsp -  register stack pointer (current location in stack, growing downwards)
 7. rsi - register source index (source for data copies)
 8. rdi - register destination index (destination for data copies)
 9. r8 - register 8
@@ -18,6 +23,18 @@ Registers are part of processors that hold 64 bits of data. It can hold values r
 14. r13 - register 13
 15. r14 - register 14
 16. r15 - register 15
+
+Note
+The different portion of the bits in 64 bit in the register can be accessed by the following
+a) rax
+1. eax - Lower 32 bits
+2. ax - Lower 16 bits
+3. al - lower 8 bits
+
+b) r8
+1. r8d - Lower 32 bits
+2. r8w - Lower 16 bits
+3. r8b - lower 8 bits
 
 ### b) Flags
 Flag can also hold data (only one bit of data true or false)
