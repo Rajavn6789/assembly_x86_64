@@ -1,0 +1,6 @@
+# Ignore all
+*
+# Unignore readme and assembly files
+!.gitignore
+!*.md
+!*.asm
