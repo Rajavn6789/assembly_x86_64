@@ -6,7 +6,8 @@
 ; ----------------------------------------------------------------------------------------
 
 section .data
-  msg:  db  "Hey, World", 10 ; msg-> name assigned to address in memory db -> define bytes  "Hey, World", 10 -> defined bytes
+  msg:  db  "Hello, World", 10 ; msg-> name assigned to address in memory db -> define bytes  "Hey, World", 10 -> defined bytes
+  msglen: equ $ - msg
 
 section .text
   global _start
@@ -19,7 +20,7 @@ _printHello:
     mov       rax, 1
     mov       rdi, 1
     mov       rsi, msg
-    mov       rdx, 11
+    mov       rdx, msglen
     syscall
     ret
 
