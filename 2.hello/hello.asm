@@ -10,7 +10,7 @@ section .data
   msglen: equ $ - msg
 
 section .text
-  global _start
+  global _start  ; equivalent of main in C programming
 
 _start:
     call _printHello
