@@ -2,8 +2,8 @@
 
 Since the 64-bit registers allow access for many sizes and locations, we define a byte as 8 bits, a word as 16 bits, a double word as 32 bits, a quadword as 64 bits, and a double quadword as 128 bits. Intel stores bytes "little endian," meaning lower significant bytes are stored in lower memory addresses.
 
-[![N|Solid](https://software.intel.com/sites/default/files/m/7/5/0/2/0/29529-figure-1.jpg)]
-Source: [Intel](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/x64-architecture)
+![](https://software.intel.com/sites/default/files/m/7/5/0/2/0/29529-figure-1.jpg)
+Source: [Intel](https://software.intel.com/en-us/articles/introduction-to-x64-assembly)
 ### a) Registers
 Registers are part of processors that hold 64 bits of data. It can hold values ranging from 0 - 2^64.
 
@@ -11,8 +11,8 @@ Registers are part of processors that hold 64 bits of data. It can hold values r
 2. rbx -  register b extended(base)
 3. rcx - register c extended(count)
 4. rdx - register d extended
-5. rbp -  register base pointer (start of stack)
-6. rsp -  register stack pointer (current location in stack, growing downwards)
+5. rbp -  register base pointer (contains address of base of current stack)
+6. rsp -  register stack pointer (contains address of top of current stack frame)
 7. rsi - register source index (source for data copies)
 8. rdi - register destination index (destination for data copies)
 9. r8 - register 8
@@ -108,5 +108,7 @@ _start:
      ret     
  ```
 
-## Credits
-Thanks to [Kupala](https://www.youtube.com/playlist?list=PLetF-YjXm-sCH6FrTz4AQhfH6INDQvQSn) and  [senecacollege](https://wiki.cdot.senecacollege.ca/wiki/X86_64_Register_and_Instruction_Quick_Start) most of the content are obtained from his video tutorial series.
+## References
+1. [How to Computers read code?](https://www.youtube.com/watch?v=QXjU9qTsYCc&t=431s)
+2. [x86 Assembly Crash Course](https://www.youtube.com/watch?v=75gBFiFtAb8&t=332s)
+3. [Kupala](https://www.youtube.com/playlist?list=PLetF-YjXm-sCH6FrTz4AQhfH6INDQvQSn) and  4. [senecacollege](https://wiki.cdot.senecacollege.ca/wiki/X86_64_Register_and_Instruction_Quick_Start)
